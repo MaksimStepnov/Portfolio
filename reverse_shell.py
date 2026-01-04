@@ -72,8 +72,8 @@ def fetch(url, timeout=10):
     headers = {
         "User-Agent": random.choice(USER_AGENTS),
         "Accept-Language": "en-US,en;q=0.9",
-        "Connection": "close"
-    }
+        "Connection": "close"}
+    
     time.sleep(random.uniform(1.2, 3.0))
     try:
         response = requests.get(url, headers=headers, timeout=timeout)
@@ -103,10 +103,8 @@ def scan_vk(vkontake):
         "data": {
             "name": name.text.strip() if name else None,
             "status": status.text.strip() if status else None,
-            "profile_photo": photo["src"] if photo else None
-        }
-    }
-
+            "profile_photo": photo["src"] if photo else None}}
+    
 def scan_vk_name(name):
     if not name or name == "1":
         return None
@@ -129,9 +127,7 @@ def scan_vk_name(name):
         "data": {
             "name": name.text.strip() if name else None,
             "status": status.text.strip() if status else None,
-            "profile_photo": photo["src"] if photo else None
-        }
-    }
+            "profile_photo": photo["src"] if photo else None}}
 
 def scan_youtube(youtube):
     url = f"https://www.youtube.com/@{youtube}"
@@ -154,7 +150,6 @@ def scan_youtube(youtube):
 def scan_youtube(username):
     if not username or username == "1":
         return None
-;l;.
     if username.startswith("@"):
         username = username[1:]
     url = f"https://www.youtube.com/@{username}"
@@ -193,7 +188,7 @@ results.append(linkedin_sensor(name))
 results.append(scan_youtube(youtube))
 results.append(scan_youtube(username))
 results.append(scan_vk(vkontakte))
-results.append(scan_vk(username))
+results.append(scan_vk(name))
 
 end_time = time.time()
 scan_time = end_time - start_time
@@ -207,3 +202,4 @@ for res in results:
         if k != "platform":
             print("   ", k, ":", v)
     print()
+
