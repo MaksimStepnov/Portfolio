@@ -16,7 +16,6 @@ import os
 init()
 
 print(Fore.LIGHTBLUE_EX, "|------OSINT TOOLKIT------|")
-print(Fore.LIGHTBLUE_EX, "|---Developed by L.T.R.---|")
 print(Fore.LIGHTGREEN_EX, "|-----Windows edition-----|")
 print(Fore.LIGHTGREEN_EX, datetime.now())
 print("")
@@ -208,3 +207,4 @@ def phonechecker(phone):
 print(Fore.LIGHTGREEN_EX, "Phone scan finished at: ", datetime.now())
 print(Fore.LIGHTMAGENTA_EX, "Phone scan results, program still in development: ")
 print(Fore.RESET, phonechecker(phone))
+
