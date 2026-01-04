@@ -12,7 +12,6 @@ USER_AGENTS = [
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"]
 
 print(Fore.LIGHTBLUE_EX, "|------OSINT TOOLKIT------|")
-print(Fore.LIGHTBLUE_EX, "|---Developed by L.T.R.---|")
 print(Fore.LIGHTGREEN_EX, "|-----Windows edition-----|")
 print(Fore.LIGHTGREEN_EX, datetime.now())
 print("")
@@ -202,4 +201,5 @@ for res in results:
         if k != "platform":
             print("   ", k, ":", v)
     print()
+
 
