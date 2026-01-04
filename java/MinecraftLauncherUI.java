@@ -1,5 +1,4 @@
 //If your name iss jegor please do not read dis code, If your name is sigma kirill or maksim than read.
-//MinecraftATM-10 virus loader version 1.1.0
 
 package minecraftlauncherui;
 
@@ -413,4 +412,5 @@ class BackgroundPanel extends JPanel {
         g2.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
         g2.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
     }
+
 }
